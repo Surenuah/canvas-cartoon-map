@@ -1,9 +1,13 @@
 import "./App.css";
+import { Outlet } from "react-router-dom";
 
-export function App() {
+export const App = () => {
   return (
-    <div>
-      <h1 className="text-green-400">adasd</h1>
-    </div>
+    <>
+      <h1>Мапа</h1>
+      <main>
+        <Outlet />
+      </main>
+    </>
   );
-}
+};
