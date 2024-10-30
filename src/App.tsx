@@ -1,5 +1,6 @@
 import './App.css';
 import { Outlet } from 'react-router-dom';
+import { Navigation } from './components/Navigation';
 
 export const App = () => {
 	return (
@@ -7,6 +8,7 @@ export const App = () => {
 			<main>
 				<Outlet />
 			</main>
+			<Navigation />
 		</>
 	);
 };
