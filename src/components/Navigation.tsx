@@ -1,32 +1,52 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export const Navigation = () => {
 	return (
 		<div className='flex items-center justify-center gap-10 bg-gray-200 rounded-full fixed bottom-10 left-0 right-0 h-16'>
-			<Link to='/home'>
+			<NavLink
+				to='/home'
+				className={({ isActive }) =>
+					isActive ? 'text-black font-medium' : 'text-gray-500'
+				}
+			>
 				<div className='flex flex-col items-center'>
 					<img src='assets/Home.png' alt='home' />
 					<span>Главная</span>
 				</div>
-			</Link>
-			<Link to='/wiz'>
+			</NavLink>
+			<NavLink
+				to='/wiz'
+				className={({ isActive }) =>
+					isActive ? 'text-black font-medium' : 'text-gray-500'
+				}
+			>
 				<div className='flex flex-col items-center'>
-					<img src='assets/Lightning.png' alt='home' />
+					<img src='assets/Lightning.png' alt='wiz' />
 					<span>Wiz</span>
 				</div>
-			</Link>
-			<Link to='/ed'>
+			</NavLink>
+			<NavLink
+				to='/ed'
+				className={({ isActive }) =>
+					isActive ? 'text-black font-medium' : 'text-gray-500'
+				}
+			>
 				<div className='flex flex-col items-center'>
-					<img src='assets/AcademicCap.png' alt='home' />
+					<img src='assets/AcademicCap.png' alt='ed' />
 					<span>ED</span>
 				</div>
-			</Link>
-			<Link to='/profile'>
+			</NavLink>
+			<NavLink
+				to='/profile'
+				className={({ isActive }) =>
+					isActive ? 'text-black font-medium' : 'text-gray-500'
+				}
+			>
 				<div className='flex flex-col items-center'>
-					<img src='assets/User.png' alt='home' />
+					<img src='assets/User.png' alt='profile' />
 					<span>Профиль</span>
 				</div>
-			</Link>
+			</NavLink>
 		</div>
 	);
 };
