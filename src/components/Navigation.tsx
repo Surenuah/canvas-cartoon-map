@@ -1,10 +1,12 @@
+
 import { NavLink } from 'react-router-dom';
+import { EducationPagePath, HomePagePath, ProfilePagePath, WizPagePath } from '../constants/RoutesPaths';
 
 export const Navigation = () => {
 	return (
 		<div className='flex items-center justify-center gap-10 bg-gray-200 rounded-full fixed bottom-10 left-0 right-0 h-16'>
 			<NavLink
-				to='/home'
+				to={HomePagePath}
 				className={({ isActive }) =>
 					isActive ? 'text-black font-medium' : 'text-gray-500'
 				}
@@ -15,7 +17,7 @@ export const Navigation = () => {
 				</div>
 			</NavLink>
 			<NavLink
-				to='/wiz'
+				to={WizPagePath}
 				className={({ isActive }) =>
 					isActive ? 'text-black font-medium' : 'text-gray-500'
 				}
@@ -26,7 +28,7 @@ export const Navigation = () => {
 				</div>
 			</NavLink>
 			<NavLink
-				to='/ed'
+				to={EducationPagePath}
 				className={({ isActive }) =>
 					isActive ? 'text-black font-medium' : 'text-gray-500'
 				}
@@ -37,7 +39,7 @@ export const Navigation = () => {
 				</div>
 			</NavLink>
 			<NavLink
-				to='/profile'
+				to={ProfilePagePath}
 				className={({ isActive }) =>
 					isActive ? 'text-black font-medium' : 'text-gray-500'
 				}
