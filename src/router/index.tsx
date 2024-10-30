@@ -10,8 +10,6 @@ const router = createBrowserRouter([
 				path: '/',
 				element: (
 					<div className='bg-gray-200 rounded-md'>
-						<Link to='wiz'>Перейти на WIZ</Link>
-						<Link to='ed'>Перейти на ED</Link>
 						<Link to='profile'>Перейти на Профиль</Link>
 					</div>
 				),
