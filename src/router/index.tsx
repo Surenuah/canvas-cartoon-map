@@ -4,17 +4,17 @@ import { HomePage } from '../pages/HomePage';
 import { WizPage } from '../pages/WizPage';
 import { ProfilePage } from '../pages/ProfilePage';
 import { EducationPage } from '../pages/EducationPage';
-import { EducationPagePath, HomePagePath, ProfilePagePath, WizPagePath } from '../constants/RoutesPaths';
+import { Routes } from '../constants/RoutesPaths';
 
 const router = createBrowserRouter([
 	{
 		path: '/',
 		element: <App />,
 		children: [
-			{ path: HomePagePath, element: <HomePage /> },
-			{ path: WizPagePath, element: <WizPage /> },
-			{ path: EducationPagePath, element: <EducationPage /> },
-			{ path: ProfilePagePath, element: <ProfilePage /> },
+			{ path: Routes.HOME, element: <HomePage /> },
+			{ path: Routes.WIZ, element: <WizPage /> },
+			{ path: Routes.EDUCATION, element: <EducationPage /> },
+			{ path: Routes.PROFILE, element: <ProfilePage /> },
 		],
 	},
 ]);
